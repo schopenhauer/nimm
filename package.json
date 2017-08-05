@@ -1,0 +1,18 @@
+{
+  "name": "nimm",
+  "version": "1.0.0",
+  "description": "Fake name generator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js"
+  },
+  "author": "schopenhauer",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "faker": "^3.1.0",
+    "serve-favicon": "^2.3.2",
+    "socket.io": "^1.7.2"
+  }
+}

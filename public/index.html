@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hello World</title>
+    <style>
+      body { padding: 50px; font: 40px 'Droid Sans',Helvetica, Arial; }
+      .name { color: #ff0000; font-weight: bold }
+    </style>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link href='//fonts.googleapis.com/css?family=Droid Sans' rel='stylesheet'>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+      socket.on('name', function(data){
+        document.title = 'Hello ' + data.firstName;
+        document.getElementById("name").innerHTML = data.firstName;
+      });
+    </script>
+
+  </head>
+  <body>
+    <span>Hello <span id="name" class="name">World</span></span>
+  </body>
+</html>
